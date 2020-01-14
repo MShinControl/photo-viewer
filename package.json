@@ -1,0 +1,45 @@
+{
+  "name": "photo-viewer",
+  "version": "1.0.0",
+  "description": "Photo Viewer Application",
+  "main": "server/start.js",
+  "scripts": {
+    "start": "nodemon server/server.js",
+    "build": "NODE_ENV=production webpack",
+    "dev": "NODE_ENV=development webpack-dev-server --open",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MShinControl/photo-viewer.git"
+  },
+  "author": "Mark Shin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MShinControl/photo-viewer/issues"
+  },
+  "homepage": "https://github.com/MShinControl/photo-viewer#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "cors": "^2.8.5",
+    "jest": "^24.9.0",
+    "node-fetch": "^2.6.0",
+    "node-sass": "^4.13.0",
+    "style-loader": "^1.1.2",
+    "supertest": "^4.0.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}
