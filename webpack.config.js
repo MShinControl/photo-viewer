@@ -9,7 +9,7 @@ module.exports = {
     publicPath: '/dist/',
     port: 8080,
     proxy: {
-      target: 'http://localhost:3333',
+      target: 'http://localhost:3000',
       context: ['/ms', '/mr'],
     },
     hot: true,
@@ -26,6 +26,13 @@ module.exports = {
           ]
         },
         exclude: /node_modules/
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        exclude: /node_modules/,
+        loader: [
+          'file-loader',
+        ],
       },
       {
         test: /\.s?css$/,
