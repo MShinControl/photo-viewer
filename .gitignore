@@ -1,8 +1,0 @@
-# Node Modules Folder
-/node_modules/
-
-# package-lock.json File
-package-lock.json
-
-# Dist Folder (Containing Bundle.js)
-/dist/

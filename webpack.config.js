@@ -1,48 +1,39 @@
 module.exports = {
-  entry: __dirname + '/client/index.js',
-  output: {
-    publicPath: '/dist/',
-    filename: 'bundle.js',
-  },
-  mode: process.env.NODE_ENV,
-  devServer: {
-    publicPath: '/dist/',
-    port: 8080,
-    proxy: {
-      target: 'http://localhost:3000',
-      context: ['/ms', '/mr'],
+    entry: __dirname + '/client/index.js',
+    output: {
+        publicPath: '/dist/',
+        filename: 'bundle.js',
     },
-    hot: true,
-  },
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            '@babel/preset-env',
-            '@babel/preset-react',
-          ]
+    mode: process.env.NODE_ENV,
+    devServer: {
+        publicPath: '/dist/',
+        port: 8080,
+        proxy: {
+            target: 'http://localhost:3333',
+            context: ['/ms', '/mr'],
         },
-        exclude: /node_modules/
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        exclude: /node_modules/,
-        loader: [
-          'file-loader',
+        hot: true,
+    },
+    module: {
+        rules: [
+            {
+                test: /\.jsx?$/,
+                loader: 'babel-loader',
+                options: {
+                    presets: [
+                        '@babel/preset-env',
+                        '@babel/preset-react',
+                    ],
+                },
+                exclude: /node_modules/
+            },
+            {
+                test: /\.s?css$/,
+                loader: [
+                    'style-loader',
+                    'css-loader',
+                ],
+            }
         ],
-      },
-      {
-        test: /\.s?css$/,
-        exclude: /node_modules/,
-        loader: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
-        ],
-      }
-    ],
-  },
+    },
 }
