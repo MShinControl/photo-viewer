@@ -16,5 +16,12 @@ These steps should only be done once!
 You should be able to:
 - [ ] Register an account. (Use something VERY simple)
 - [ ] Login.
+- [ ] Logout after verification.
 - [ ] Resize Images after verification
 - [ ] Changes colors.
+
+## Final Thoughts
+  Overall, this was a very fun assessment. I believe I've hit all the notes of resize, grayscaling and auth.
+A little later on I realized that it was localStorage that was doing the page persistence and that I'm not really doing anything with my JWT tokens, first name, and last name data besides just saving them.
+
+For Stretch features I really wanted to implement lazy loading + React suspense for the infinite scrolling (It's paginated I swear). + actual deployment.
