@@ -33,7 +33,7 @@ const Register = ({ hide, setStatus }) => {
   };
 
   return (
-    <form onSubmit={(event) => {
+    <form className="register-modal" onSubmit={(event) => {
         event.preventDefault();
         if (!form.firstName || !form.lastName || !form.username || !form.password) return alert("Enter all fields below!");
         saveUser(form);
@@ -69,7 +69,7 @@ const Register = ({ hide, setStatus }) => {
         value={form.password}
         onChange={handleOnChange}
       />
-       <input type="submit" value="Create Account" />
+       <input className="submit-btn" type="submit" value="Create Account" />
     </form>
   )
 }

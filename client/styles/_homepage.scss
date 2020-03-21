@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  background-image: url('./assets/Yeah.jpg');
+}
+
+
+.title-ctn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  text-align: center;
+  font-family: $font-family;
+
+  h1 {
+    font-size: 7.5rem;
+    margin: auto;
+  }
+  h2 {
+    font-size: 3rem;
+    margin: auto;
+  }
+}
+
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: $gray-900;
+  height: 4rem;
+  
+
+  .login-auth-btn {
+    outline: none;
+    color: $white;
+    transition: 1s;
+    &:hover {
+      color: $yellow;
+      text-decoration: underline;
+    }
+  }
+
+  .register-auth-btn {
+    outline: none;
+    color: $cyan;
+    text-decoration: underline;
+    transition: 1s;
+    &:hover {
+      color: $yellow;
+      text-decoration: none;
+    }
+  }
+
+  button {
+    font-family: $font-family;
+    font-size: xx-large;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+  }
+}

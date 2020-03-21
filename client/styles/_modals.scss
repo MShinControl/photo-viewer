@@ -1,11 +1,10 @@
 //MODAL STYLING
-
-form {
+.login-modal {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   align-items: center;
-  grid-gap: 1rem;
+  font-family: "Baloo Da 2";
   
   input {
     padding: .5rem;
@@ -20,7 +19,61 @@ form {
   label span {
     color: red;
   }
+
+  .submit-btn {
+    grid-column: 2 / 3;
+    margin-top: 1rem;
+    margin-left: auto;
+    font-family: "Baloo Da 2";
+    font-size: x-large;
+    border: none;
+    transition: 1s;
+
+    &:hover {
+      color: $cyan;
+      text-decoration: underline;
+    }
+  }
 }
+
+
+.register-modal {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(5, 1fr);
+  align-items: center;
+  grid-gap: 1rem;
+  font-family: "Baloo Da 2";
+  
+  input {
+    padding: .5rem;
+    font-size: small;
+  }
+  
+  label {
+    float: left;
+    font-weight: 500;
+  }
+  
+  label span {
+    color: red;
+  }
+
+  .submit-btn {
+    grid-column: 2 / 3;
+    margin-top: 1rem;
+    margin-left: auto;
+    font-family: "Baloo Da 2";
+    font-size: x-large;
+    border: none;
+    transition: 1s;
+    &:hover {
+      color: $cyan;
+      text-decoration: underline;
+    }
+  }
+}
+
 
 .modal-underlay {
   position: fixed;
@@ -35,13 +88,15 @@ form {
 
 
 .modal {
+  top:20%;
+  left: 40%;
   z-index: 100;
   background: white;
-  position: relative;
-  margin: 1rem auto;
+  position: absolute;
   border-radius: 3px;
   max-width: 500px;
   padding: 2rem;
+  font-family: "Baloo Da 2";
 
   .modal-header {
     display: flex;

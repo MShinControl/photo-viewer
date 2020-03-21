@@ -31,7 +31,7 @@ const Login = ({ hide, setStatus }) => {
 
 
   return (
-    <form onSubmit={(event) => {
+    <form className="login-modal" onSubmit={(event) => {
       event.preventDefault();
       if (!form.username || !form.password) return alert("Enter all fields below!");
       verifyUser(form);
@@ -53,7 +53,7 @@ const Login = ({ hide, setStatus }) => {
       value={form.password}
       onChange={handleOnChange}
     />
-    <input type="submit" value="Login" />
+    <input className="submit-btn" type="submit" value="Login" />
   </form>
   )
 }
