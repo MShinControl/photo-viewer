@@ -1,3 +1,13 @@
+/**
+ * ************************************
+ *
+ * @module userController.js
+ * @description User / auth middleware to handle saving and verify a user.
+ *              Also responsible for hashing passwords.
+ *
+ * ************************************
+ */
+
 const pool = require('../database/db');
 const bcrypt = require('bcrypt');
 
@@ -34,7 +44,7 @@ userController.saveUser = async (req, res, next) => {
   }
 }
 
-
+//Login Middleware
 userController.verifyUser = async (req, res, next) => {
   const { username, password } = req.body;
 
@@ -47,8 +57,10 @@ userController.verifyUser = async (req, res, next) => {
     }
 
     const res = await pool.query(query);
+    //Compare incoming password & hash inside out database
     const match = await bcrypt.compare(password, res.rows[0].password);
 
+    //If there's a match move on, if not send error
     if(match) return next();
     else {
       res

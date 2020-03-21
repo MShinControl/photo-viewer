@@ -1,3 +1,13 @@
+/**
+ * ************************************
+ *
+ * @module Login
+ * @description Sends user information to /login endpoint for verification.
+ *              Also renders all Forms & inputs and assigns the values to state.
+ *
+ * ************************************
+ */
+
 import React, { useState } from 'react';
 
 const Login = ({ hide, setStatus }) => {

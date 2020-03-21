@@ -1,3 +1,12 @@
+/**
+ * ************************************
+ *
+ * @module App
+ * @description Renders MainContainer
+ *
+ * ************************************
+ */
+
 import React from "react";
 import MainContainer from './containers/MainContainer';
 

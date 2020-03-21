@@ -1,7 +1,16 @@
+/**
+ * ************************************
+ *
+ * @module AuthComponent
+ * @description Parent Component for both Login & Registration Modals
+ *
+ * ************************************
+ */
+
 import React, { useState } from "react";
 import RegisterModal from './Modal/RegisterModal';
 import LoginModal from './Modal/LoginModal';
-import useModal from '../customHooks/useModal';
+import useModal from '../customHooks/useModal'; // Import custom hook.
 
 const AuthComponent = ({ setStatus }) => {
   const { isShowing, toggle } = useModal();
@@ -23,13 +32,16 @@ const AuthComponent = ({ setStatus }) => {
       }
 
       <nav>
-        <button className="login-auth-btn" onClick={() => handleOnClick('login')}>Login</button>
-        <button className="register-auth-btn" onClick={() => handleOnClick('register')}>Register</button>
+        <img className="logo" src="./client/styles/assets/camera-retro-solid.svg"></img>
+        <div className="auth-ctn">
+          <button className="login-auth-btn" onClick={() => handleOnClick('login')}>Login</button>
+          <button className="register-auth-btn" onClick={() => handleOnClick('register')}>Register</button>
+        </div>
       </nav>
 
       <div className="title-ctn">
-        <h1 class="title">Welcome to the Gallery.</h1>
-        <h2 class="sub-title">Hope you like what you see.</h2>
+        <h1 className="title">Welcome to the Gallery.</h1>
+        <h2 className="sub-title">Hope you like what you see.</h2>
       </div>
     </div>
   )

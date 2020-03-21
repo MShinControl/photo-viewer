@@ -1,3 +1,14 @@
+/**
+ * ************************************
+ *
+ * @module LoginModal
+ * @description Renders the modal itself and all the forms + inputs inside.
+ *              CreatePortal allows React to create dom elements outside or on top
+ *              of the main root node.
+ *
+ * ************************************
+ */
+
 import React, { Fragment } from 'react';
 import { createPortal } from 'react-dom';
 import Login from '../Auth/Login';

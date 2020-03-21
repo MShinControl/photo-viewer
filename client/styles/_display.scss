@@ -1,0 +1,55 @@
+.display {
+
+  nav {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+
+    form {
+      margin: auto;
+
+      input {
+        margin: 1rem;
+        padding: .5rem;
+        border-radius: 5px;
+        outline: none;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .logout {
+    outline: none;
+    color: $cyan;
+    text-decoration: underline;
+    transition: 1s;
+    &:hover {
+      color: $yellow;
+      text-decoration: none;
+    }
+  }
+
+  .images-ctn {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+    margin: 5rem auto;
+
+    img {
+      margin: auto;
+      border: 2px solid white;
+      transition: .2s ease-in;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+
+  .end {
+    font-family: $font-family;
+    text-align: center;
+  }
+}

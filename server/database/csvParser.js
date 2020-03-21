@@ -1,3 +1,12 @@
+/**
+ * ************************************
+ *
+ * @module csvParser.js
+ * @description CSV file reader.
+ *
+ * ************************************
+ */
+
 const fs = require('fs');
 const path = require('path');
 
