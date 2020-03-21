@@ -1,0 +1,8 @@
+#Node Modules
+/node_modules/
+
+#Build file
+dist/bundle.js
+
+#package-lock.json
+/package-lock.json

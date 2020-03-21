@@ -1,0 +1,67 @@
+//MODAL STYLING
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(4, 1fr);
+  align-items: center;
+  grid-gap: 1rem;
+  
+  input {
+    padding: .5rem;
+    font-size: small;
+  }
+  
+  label {
+    float: left;
+    font-weight: 500;
+  }
+  
+  label span {
+    color: red;
+  }
+}
+
+.modal-underlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: .5;
+}
+
+
+.modal {
+  z-index: 100;
+  background: white;
+  position: relative;
+  margin: 1rem auto;
+  border-radius: 3px;
+  max-width: 500px;
+  padding: 2rem;
+
+  .modal-header {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 1;
+      color: black;
+      opacity: .3;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+  }
+
+  hr {
+    width: 100%;
+    border: 1px solid black;
+    margin: 1rem auto;
+  }
+}
