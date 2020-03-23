@@ -9,8 +9,8 @@ These steps should only be done once!
 - [ ] Then `cd <folder name>`.
 
 ## What do I need to do to Run
-- [ ] Install all dependencies w/ `npm i` or `npm install`
-- [ ] run `npm run dev` on your terminal under the `photo-viewer` Directory.
+- [ ] Install all dependencies w/ `npm install`
+- [ ] Then run `npm run dev` on your terminal under the `photo-viewer` Directory.
 - [ ] `http://localhost:8080/` should automatically pop up on your browser.
 
 ## Features
